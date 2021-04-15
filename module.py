@@ -1,3 +1,7 @@
+# coding: UTF-8
+import json
+
+
 class Module:
     def __init__(self):
         self.settings: dict = {
@@ -6,12 +10,22 @@ class Module:
             }
         }
 
+    def write_to_json(self):
+        with open(f"{self.settings['module']['property']['NAME']}.json", "w") as writeFile:
+            json.dump(self.settings, writeFile)
+
     def read_file(self, filename: str):
         if filename[-4:] != ".tcl":
             raise Exception(f"Unexpected format to open.\nExpected: .tcl\nReceived: {filename[-4:]}")
-        with open(filename) as file:
+            # if we took not .tcl file
+        elif filename[-4:] == ".tcl":
+            return self.__read_tcl(filename=filename)
 
-            for e, row in enumerate(file):
+        # TODO reading own jsons
+
+    def __read_tcl(self, filename):
+        with open(filename) as file:
+            for row in file:
                 subrows = row.split(" ")
                 command = subrows.pop(0).split("_")
                 if command[0] == "add":
@@ -24,8 +38,73 @@ class Module:
                         command=command,
                         row=subrows
                     )
-            # print(self.settings)
 
+            return self.settings
+
+    def __add(self, command: list, row: list):
+        if len(command) == 2:
+            try:
+                newDict = self.settings[command[1]]
+            except KeyError:
+                newDict = self.settings[command[1]] = {}
+
+            commandDict = newDict[row[0]] = {}
+
+        elif len(command) == 3:
+            if command[1] == 'fileset' and command[2] == 'file':
+                try:
+                    newDict = self.settings[command[1]][row[0]]
+                except KeyError:
+                    newDict = self.settings[command[1]][row[0]] = {}
+
+                newDict.update(
+                    {
+                        "type": row[1],
+                        row[2]: row[3],
+                        "status": row[4][:-1]
+                    }
+                )
+
+            else:
+                try:
+                    newDict = self.settings[command[1]][row[0]]
+                except KeyError:
+                    newDict = self.settings[command[1]][row[0]] = {}
+
+                newDict.update(
+                    {
+                        "IO_type": row[3],
+                        "name": row[1],
+                        "value": row[4][:-1],
+                    }
+                )
+
+    def __set(self, command: list, row: list):
+        if len(row) == 2:
+            try:
+                newDict = self.settings[command[1]][command[2]]
+
+                newDict.update(
+                    {
+                        row[0]: row[1][:-1]
+                    }
+                )
+            except Exception:
+                print(Exception)
+
+        elif len(row) == 3:
+            try:
+                newDict = self.settings[command[1]][row[0]][command[2]]
+            except KeyError:
+                newDict = self.settings[command[1]][row[0]][command[2]] = {}
+
+            newDict.update(
+                {
+                    row[1]: row[2][:-1]
+                }
+            )
+
+    """
     def __add(self, command: list, row: list):
         if len(command) == 2:
             new_dict = {
@@ -78,6 +157,4 @@ class Module:
 
                 }
             )
-            
-m = Module()
-data = m.read_file("example.tcl")
+    """

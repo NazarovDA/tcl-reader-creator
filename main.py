@@ -1,6 +1,11 @@
+# coding: UTF-8
 import module
 
 
-if __name__ == "__main__":
+def do_smth():
     m = module.Module()
-    data = m.read_file("example.tcl")
+    m.read_file("example.tcl")
+    m.write_to_json()
+
+if __name__ == "__main__":
+    do_smth()
