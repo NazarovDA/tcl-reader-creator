@@ -5,7 +5,7 @@ import module
 def do_smth():
     m = module.Module()
     m.read_file("example.tcl")
-    m.write_to_json()
+    m.write_to_tcl()
 
 
 if __name__ == "__main__":
