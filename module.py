@@ -100,6 +100,7 @@ class Module:
 
             commandDict = newDict[row[0]] = {}
 
+
         elif len(command) == 3:
             if command[1] == 'fileset' and command[2] == 'file':
                 try:
