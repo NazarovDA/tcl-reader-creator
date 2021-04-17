@@ -56,7 +56,6 @@ class Module:
                 d = self.settings['fileset']
                 for fileset in d:
                     print(fileset)
-
             except KeyError:
                 pass
 
@@ -104,15 +103,19 @@ class Module:
         elif len(command) == 3:
             if command[1] == 'fileset' and command[2] == 'file':
                 try:
-                    newDict: dict = self.settings[command[1]][row[0]]
+                    d = self.settings[command[1]]["files"]
                 except KeyError:
-                    newDict = self.settings[command[1]][row[0]] = {}
+                    d = self.settings[command[1]]["files"] = {}
+                try:
+                    newDict: dict = d[row[0]]
+                except KeyError:
+                    newDict = d[row[0]] = {}
 
                 newDict.update(
                     {
                         "type": row[1],
                         row[2]: row[3],
-                        "status": row[4][:-1]
+                        "status": row[4][:-1] if len(row) == 5 else None
                     }
                 )
 
