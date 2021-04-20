@@ -55,9 +55,39 @@ class Module:
                                 f"#\n")
                 d = self.settings['fileset']
                 for fileset in d:
-                    print(fileset)
+                    if fileset != "files":
+                        empty_str = ""
+                        writeFile.write(f'add_fileset {fileset} {fileset} "" "" \n')
+                        actualDict = d[fileset]
+                        for prop in actualDict['property']:
+                            writeFile.write(f'set_fileset_property {fileset} {prop} {actualDict["property"][prop]}\n')
+                    if fileset == 'files':
+                        actualDict = d[fileset]
+                        for file in actualDict:
+                            writeFile.write(f"add_fileset_file {file}"
+                                            f" {actualDict[file]['type']}"
+                                            f" PATH {actualDict[file]['PATH']}"
+                                            f"{' TOP_LEVEL_FILE' if actualDict[file]['status'] is not None else ''}")
+                            writeFile.write('\n') if actualDict[file]['status'] is not None else writeFile.write('')
             except KeyError:
                 pass
+
+            try:
+                writeFile.write(f"\n"
+                                f"\n"
+                                f"#\n"
+                                f"#paramaters\n"
+                                f"#\n")
+                d = self.settings['parameter']
+                for param in d:
+                    print(f"{param} {d[param]}")
+                    writeFile.write(f'add_parameter {param} {d[param]["property"]["TYPE"]} {d[param]["property"]["DEFAULT_VALUE"]}\n')
+                    for prop in d[param]["property"]:
+                        writeFile.write(f"set_parameter_property {param} {prop} {d[param]['property'][prop]}\n")
+
+            except KeyError:
+                pass
+
 
     def read_file(self, filename: str):
         if filename[-4:] != ".tcl":
