@@ -18,70 +18,53 @@ class Ui_MainWindow(object):
         MainWindow.setMinimumSize(QtCore.QSize(1280, 720))
         MainWindow.setMaximumSize(QtCore.QSize(1280, 720))
         MainWindow.setBaseSize(QtCore.QSize(1280, 720))
-
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-
         self.gridLayoutWidget = QtWidgets.QWidget(self.centralwidget)
         self.gridLayoutWidget.setGeometry(QtCore.QRect(0, 0, 320, 25))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
-
         self.ProjectLayout = QtWidgets.QHBoxLayout(self.gridLayoutWidget)
         self.ProjectLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
         self.ProjectLayout.setContentsMargins(0, 0, 0, 0)
         self.ProjectLayout.setObjectName("ProjectLayout")
-
         self.newProjectButton = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.newProjectButton.setObjectName("newProjectButton")
         self.ProjectLayout.addWidget(self.newProjectButton)
-
         self.saveProjectButton = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.saveProjectButton.setObjectName("saveProjectButton")
         self.ProjectLayout.addWidget(self.saveProjectButton)
-
         self.loadProjectButton = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.loadProjectButton.setObjectName("loadProjectButton")
         self.ProjectLayout.addWidget(self.loadProjectButton)
-
         self.CurrentProjectLayout = QtWidgets.QWidget(self.centralwidget)
         self.CurrentProjectLayout.setGeometry(QtCore.QRect(-1, 29, 1311, 781))
         self.CurrentProjectLayout.setObjectName("CurrentProjectLayout")
-
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.CurrentProjectLayout)
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(0, 0, 451, 51))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
-
         self.CurrentProjectButtonsLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.CurrentProjectButtonsLayout.setContentsMargins(0, 0, 0, 0)
         self.CurrentProjectButtonsLayout.setObjectName("CurrentProjectButtonsLayout")
-
         self.moduleSettingsButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.moduleSettingsButton.setObjectName("moduleSettingsButton")
         self.CurrentProjectButtonsLayout.addWidget(self.moduleSettingsButton)
-
         self.moduleFilesetButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.moduleFilesetButton.setObjectName("moduleFilesetButton")
         self.CurrentProjectButtonsLayout.addWidget(self.moduleFilesetButton)
-
         self.moduleParametersButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.moduleParametersButton.setObjectName("moduleParametersButton")
         self.CurrentProjectButtonsLayout.addWidget(self.moduleParametersButton)
-
-        self.pushButton_7 = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        self.pushButton_7.setObjectName("pushButton_7")
-        self.CurrentProjectButtonsLayout.addWidget(self.pushButton_7)
-
+        self.moduleConnectionsButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
+        self.moduleConnectionsButton.setObjectName("moduleConnectionsButton")
+        self.CurrentProjectButtonsLayout.addWidget(self.moduleConnectionsButton)
         self.windowForWidgets = QtWidgets.QWidget(self.CurrentProjectLayout)
         self.windowForWidgets.setGeometry(QtCore.QRect(0, 50, 1281, 591))
         self.windowForWidgets.setObjectName("windowForWidgets")
-
         MainWindow.setCentralWidget(self.centralwidget)
-
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1280, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
-
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
@@ -98,4 +81,4 @@ class Ui_MainWindow(object):
         self.moduleSettingsButton.setText(_translate("MainWindow", "Module settings"))
         self.moduleFilesetButton.setText(_translate("MainWindow", "Module fileset"))
         self.moduleParametersButton.setText(_translate("MainWindow", "Module parameters"))
-        self.pushButton_7.setText(_translate("MainWindow", "Module connections"))
+        self.moduleConnectionsButton.setText(_translate("MainWindow", "Module connections"))

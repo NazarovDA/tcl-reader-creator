@@ -78,6 +78,7 @@
     },
     "interface": {
         "clock": {
+            "endpoint": "clock",
             "property": {
                 "clockRate": "0",
                 "ENABLED": "true",
@@ -95,6 +96,7 @@
             }
         },
         "avms": {
+            "endpoint": "avalon",
             "property": {
                 "addressUnits": "WORDS",
                 "associatedClock": "clock",
@@ -158,6 +160,7 @@
             }
         },
         "reset_sink": {
+            "endpoint": "reset",
             "property": {
                 "associatedClock": "clock",
                 "synchronousEdges": "DEASSERT",

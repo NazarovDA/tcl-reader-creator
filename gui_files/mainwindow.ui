@@ -109,7 +109,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_7">
+       <widget class="QPushButton" name="moduleConnectionsButton">
         <property name="text">
          <string>Module connections</string>
         </property>
