@@ -1,6 +1,11 @@
 # coding: UTF-8
 import json
 import time
+import logging
+import datetime as dt
+
+logging.basicConfig(filename="logs/module_logs.log", level=logging.INFO)
+log = logging.getLogger("KeyError")
 
 program_name = "i don't choose now"
 
@@ -9,13 +14,48 @@ class Module:
     def __init__(self):
         self.settings: dict = {
             "module": {
-                "property": {}
-            }
+                "property": {
+                    "DESCRIPTION": None,
+                    "NAME": None,
+                    "VERSION": None,
+                    "INTERNAL": None,
+                    "OPAQUE_ADDRESS_MAP": None,
+                    "AUTHOR": None,
+                    "DISPLAY_NAME": None,
+                    "INSTANTIATE_IN_SYSTEM_MODULE": None,
+                    "EDITABLE": None,
+                    "REPORT_TO_TALKBACK": None,
+                    "ALLOW_GREYBOX_GENERATION": None,
+                    "REPORT_HIERARCHY": None
+                }
+            },
+            "fileset": {
+                "QUARTUS_SYNTH": {
+                    "property": {
+                        "TOP_LEVEL": None,
+                        "ENABLE_RELATIVE_INCLUDE_PATHS": None,
+                        "ENABLE_FILE_OVERWRITE_MODE": None
+                    }
+                },
+                "files": {
+
+                }
+            },
+            "parameter": {},
+            "interface": {}
         }
+
+    def __log_key_error(self, err):
+        log.exception(f"{dt.datetime.now()}\n{err}\n")
+
+    def __uncorrect_file_load(self, err):
+        log.exception(f"{dt.datetime.now()}\n{err}\n")
+
 
     def write_to_json(self):
         with open(f"{self.settings['module']['property']['NAME']}.json", "w") as writeFile:
-            json.dump(self.settings, writeFile)
+            json.dump(self.settings, writeFile, indent=4)
+        log.info(f"\n\njson({self.settings['module']['property']['NAME']}.json) created at {dt.datetime.now()}\n\n")
 
     def write_to_tcl(self):
         with open(f"{self.settings['module']['property']['NAME']}.tcl", "w") as writeFile:
@@ -70,8 +110,9 @@ class Module:
                                             f"{' TOP_LEVEL_FILE' if actualDict[file]['status'] is not None else ''}")
                             writeFile.write('\n') if actualDict[file]['status'] is not None else writeFile.write('')
             except KeyError:
-                pass
+                self.__log_key_error(KeyError)
 
+            # parameters
             try:
                 writeFile.write(f"\n"
                                 f"\n"
@@ -79,20 +120,57 @@ class Module:
                                 f"#paramaters\n"
                                 f"#\n")
                 d = self.settings['parameter']
+
                 for param in d:
-                    print(f"{param} {d[param]}")
-                    writeFile.write(f'add_parameter {param} {d[param]["property"]["TYPE"]} {d[param]["property"]["DEFAULT_VALUE"]}\n')
+                    writeFile.write(
+                        f'add_parameter {param} {d[param]["property"]["TYPE"]} {d[param]["property"]["DEFAULT_VALUE"]}\n')
+
                     for prop in d[param]["property"]:
                         writeFile.write(f"set_parameter_property {param} {prop} {d[param]['property'][prop]}\n")
 
             except KeyError:
-                pass
+                self.__log_key_error(KeyError)
 
+            # interface
+            try:
+                d = self.settings['interface']
+                for param in d:
+                    writeFile.write(f"\n"
+                                    f"\n"
+                                    f"#\n"
+                                    f"#connection point {param}\n"
+                                    f"#\n"
+                                    f"add_interface {param} {param} end")
+
+                    for prop in d[param]['property']:
+                        writeFile.write(f"set_interface_property {param} {prop} {d[param]['property'][prop]}\n")
+
+                    try:
+                        for port in d[param]['ports']:
+                            writeFile.write(
+                                f"add_interface_port {param} {port} {d[param]['ports'][port]['IO_type']} {d[param]['ports'][port]['value']}\n")
+                    except KeyError:
+                        self.__log_key_error(KeyError)
+
+                    try:
+                        for assignment in d[param]['assignment']:
+                            writeFile.write(
+                                f"set_interface_assignment {param} {assignment} {d[param]['assignment'][assignment]}\n")
+                    except KeyError:
+                        self.__log_key_error(KeyError)
+
+
+
+
+            except KeyError:
+                self.__log_key_error(KeyError)
 
     def read_file(self, filename: str):
-        if filename[-4:] != ".tcl":
-            raise Exception(f"Unexpected format to open.\nExpected: .tcl\nReceived: {filename[-4:]}")
-            # if we took not .tcl file
+        if filename[-4:] != (".tcl" or ".json"):
+            self.__uncorrect_file_load(Exception(f"Unexpected format to open.\n"
+                                                 f"Expected: .tcl\n"
+                                                 f"Received: {filename[-4:]}"))
+            # if we took not .tcl or .json file
         elif filename[-4:] == ".tcl":
             return self.__read_tcl(filename=filename)
 
@@ -148,12 +226,16 @@ class Module:
                         "status": row[4][:-1] if len(row) == 5 else None
                     }
                 )
-
-            else:
+            elif command[2] == 'port':
                 try:
-                    newDict = self.settings[command[1]][row[0]]
+                    ports = self.settings[command[1]][row[0]]['ports']
+                    del (ports)
                 except KeyError:
-                    newDict = self.settings[command[1]][row[0]] = {}
+                    self.settings[command[1]][row[0]]['ports'] = {}
+                try:
+                    newDict = self.settings[command[1]][row[0]]['ports'][row[2]]
+                except KeyError:
+                    newDict = self.settings[command[1]][row[0]]['ports'][row[2]] = {}
 
                 newDict.update(
                     {
@@ -174,7 +256,7 @@ class Module:
                     }
                 )
             except Exception:
-                print(Exception)
+                log.exception(KeyError)
 
         elif len(row) == 3:
             try:

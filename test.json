@@ -1,1 +1,179 @@
-{"module": {"property": {"DESCRIPTION": "\"\"", "NAME": "test", "VERSION": "1.0", "INTERNAL": "false", "OPAQUE_ADDRESS_MAP": "true", "AUTHOR": "\"\"", "DISPLAY_NAME": "test", "INSTANTIATE_IN_SYSTEM_MODULE": "true", "EDITABLE": "true", "REPORT_TO_TALKBACK": "false", "ALLOW_GREYBOX_GENERATION": "false", "REPORT_HIERARCHY": "false"}}, "fileset": {"QUARTUS_SYNTH": {"property": {"TOP_LEVEL": "test", "ENABLE_RELATIVE_INCLUDE_PATHS": "false", "ENABLE_FILE_OVERWRITE_MODE": "false"}}, "files": {"test.sv": {"type": "SYSTEM_VERILOG", "PATH": "test.sv", "status": "TOP_LEVEL_FILE"}, "test2.sv": {"type": "SYSTEM_VERILOG", "PATH": "test.sv\n", "status": null}, "test3.sv": {"type": "SYSTEM_VERILOG", "PATH": "test.sv\n", "status": null}, "test4.sv": {"type": "SYSTEM_VERILOG", "PATH": "test.sv\n", "status": null}, "test5.sv": {"type": "SYSTEM_VERILOG", "PATH": "test.sv\n", "status": null}, "test6.sv": {"type": "SYSTEM_VERILOG", "PATH": "test.sv\n", "status": null}}}, "parameter": {"DATAWIDTH": {"property": {"DEFAULT_VALUE": "32", "DISPLAY_NAME": "DATAWIDTH", "TYPE": "INTEGER", "UNITS": "None", "HDL_PARAMETER": "true"}}, "ADDRESSWIDTH": {"property": {"DEFAULT_VALUE": "32", "DISPLAY_NAME": "ADDRESSWIDTH", "TYPE": "INTEGER", "UNITS": "None", "HDL_PARAMETER": "true"}}}, "interface": {"clock": {"property": {"clockRate": "0", "ENABLED": "true", "EXPORT_OF": "\"\"", "PORT_NAME_MAP": "\"\"", "CMSIS_SVD_VARIABLES": "\"\"", "SVD_ADDRESS_GROUP": "\"\""}, "IO_type": "Input", "name": "clk", "value": "1"}, "avms": {"property": {"addressUnits": "WORDS", "associatedClock": "clock", "associatedReset": "reset_sink", "bitsPerSymbol": "8", "burstOnBurstBoundariesOnly": "false", "burstcountUnits": "WORDS", "explicitAddressSpan": "0", "holdTime": "0", "linewrapBursts": "false", "maximumPendingReadTransactions": "0", "maximumPendingWriteTransactions": "0", "readLatency": "0", "readWaitTime": "1", "setupTime": "0", "timingUnits": "Cycles", "writeWaitTime": "0", "ENABLED": "true", "EXPORT_OF": "\"\"", "PORT_NAME_MAP": "\"\"", "CMSIS_SVD_VARIABLES": "\"\"", "SVD_ADDRESS_GROUP": "\"\""}, "IO_type": "Output", "name": "avms_readdata", "value": "DATAWIDTH", "assignment": {"embeddedsw.configuration.isFlash": "0", "embeddedsw.configuration.isMemoryDevice": "0", "embeddedsw.configuration.isNonVolatileStorage": "0", "embeddedsw.configuration.isPrintableDevice": "0"}}, "reset_sink": {"property": {"associatedClock": "clock", "synchronousEdges": "DEASSERT", "ENABLED": "true", "EXPORT_OF": "\"\"", "PORT_NAME_MAP": "\"\"", "CMSIS_SVD_VARIABLES": "\"\"", "SVD_ADDRESS_GROUP": "\"\""}, "IO_type": "Input", "name": "rst_n", "value": "1"}}}
+{
+    "module": {
+        "property": {
+            "DESCRIPTION": "\"\"",
+            "NAME": "test",
+            "VERSION": "1.0",
+            "INTERNAL": "false",
+            "OPAQUE_ADDRESS_MAP": "true",
+            "AUTHOR": "\"\"",
+            "DISPLAY_NAME": "test",
+            "INSTANTIATE_IN_SYSTEM_MODULE": "true",
+            "EDITABLE": "true",
+            "REPORT_TO_TALKBACK": "false",
+            "ALLOW_GREYBOX_GENERATION": "false",
+            "REPORT_HIERARCHY": "false"
+        }
+    },
+    "fileset": {
+        "QUARTUS_SYNTH": {
+            "property": {
+                "TOP_LEVEL": "test",
+                "ENABLE_RELATIVE_INCLUDE_PATHS": "false",
+                "ENABLE_FILE_OVERWRITE_MODE": "false"
+            }
+        },
+        "files": {
+            "test.sv": {
+                "type": "SYSTEM_VERILOG",
+                "PATH": "test.sv",
+                "status": "TOP_LEVEL_FILE"
+            },
+            "test2.sv": {
+                "type": "SYSTEM_VERILOG",
+                "PATH": "test.sv\n",
+                "status": null
+            },
+            "test3.sv": {
+                "type": "SYSTEM_VERILOG",
+                "PATH": "test.sv\n",
+                "status": null
+            },
+            "test4.sv": {
+                "type": "SYSTEM_VERILOG",
+                "PATH": "test.sv\n",
+                "status": null
+            },
+            "test5.sv": {
+                "type": "SYSTEM_VERILOG",
+                "PATH": "test.sv\n",
+                "status": null
+            },
+            "test6.sv": {
+                "type": "SYSTEM_VERILOG",
+                "PATH": "test.sv\n",
+                "status": null
+            }
+        }
+    },
+    "parameter": {
+        "DATAWIDTH": {
+            "property": {
+                "DEFAULT_VALUE": "32",
+                "DISPLAY_NAME": "DATAWIDTH",
+                "TYPE": "INTEGER",
+                "UNITS": "None",
+                "HDL_PARAMETER": "true"
+            }
+        },
+        "ADDRESSWIDTH": {
+            "property": {
+                "DEFAULT_VALUE": "32",
+                "DISPLAY_NAME": "ADDRESSWIDTH",
+                "TYPE": "INTEGER",
+                "UNITS": "None",
+                "HDL_PARAMETER": "true"
+            }
+        }
+    },
+    "interface": {
+        "clock": {
+            "property": {
+                "clockRate": "0",
+                "ENABLED": "true",
+                "EXPORT_OF": "\"\"",
+                "PORT_NAME_MAP": "\"\"",
+                "CMSIS_SVD_VARIABLES": "\"\"",
+                "SVD_ADDRESS_GROUP": "\"\""
+            },
+            "ports": {
+                "clk": {
+                    "IO_type": "Input",
+                    "name": "clk",
+                    "value": "1"
+                }
+            }
+        },
+        "avms": {
+            "property": {
+                "addressUnits": "WORDS",
+                "associatedClock": "clock",
+                "associatedReset": "reset_sink",
+                "bitsPerSymbol": "8",
+                "burstOnBurstBoundariesOnly": "false",
+                "burstcountUnits": "WORDS",
+                "explicitAddressSpan": "0",
+                "holdTime": "0",
+                "linewrapBursts": "false",
+                "maximumPendingReadTransactions": "0",
+                "maximumPendingWriteTransactions": "0",
+                "readLatency": "0",
+                "readWaitTime": "1",
+                "setupTime": "0",
+                "timingUnits": "Cycles",
+                "writeWaitTime": "0",
+                "ENABLED": "true",
+                "EXPORT_OF": "\"\"",
+                "PORT_NAME_MAP": "\"\"",
+                "CMSIS_SVD_VARIABLES": "\"\"",
+                "SVD_ADDRESS_GROUP": "\"\""
+            },
+            "ports": {
+                "address": {
+                    "IO_type": "Input",
+                    "name": "avms_address",
+                    "value": "ADDRESSWIDTH"
+                },
+                "read": {
+                    "IO_type": "Input",
+                    "name": "avms_read",
+                    "value": "1"
+                },
+                "write": {
+                    "IO_type": "Input",
+                    "name": "avms_write",
+                    "value": "1"
+                },
+                "writedata": {
+                    "IO_type": "Input",
+                    "name": "avms_writedata",
+                    "value": "DATAWIDTH"
+                },
+                "byteenable": {
+                    "IO_type": "Input",
+                    "name": "avms_byteenable",
+                    "value": "DATAWIDTH/8"
+                },
+                "readdata": {
+                    "IO_type": "Output",
+                    "name": "avms_readdata",
+                    "value": "DATAWIDTH"
+                }
+            },
+            "assignment": {
+                "embeddedsw.configuration.isFlash": "0",
+                "embeddedsw.configuration.isMemoryDevice": "0",
+                "embeddedsw.configuration.isNonVolatileStorage": "0",
+                "embeddedsw.configuration.isPrintableDevice": "0"
+            }
+        },
+        "reset_sink": {
+            "property": {
+                "associatedClock": "clock",
+                "synchronousEdges": "DEASSERT",
+                "ENABLED": "true",
+                "EXPORT_OF": "\"\"",
+                "PORT_NAME_MAP": "\"\"",
+                "CMSIS_SVD_VARIABLES": "\"\"",
+                "SVD_ADDRESS_GROUP": "\"\""
+            },
+            "ports": {
+                "reset_n": {
+                    "IO_type": "Input",
+                    "name": "rst_n",
+                    "value": "1"
+                }
+            }
+        }
+    }
+}
