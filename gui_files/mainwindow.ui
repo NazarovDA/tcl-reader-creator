@@ -68,64 +68,127 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="CurrentProjectLayout" native="true">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>-1</x>
+      <x>-4</x>
       <y>29</y>
-      <width>1311</width>
-      <height>781</height>
+      <width>1281</width>
+      <height>641</height>
      </rect>
     </property>
-    <widget class="QWidget" name="horizontalLayoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>451</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="CurrentProjectButtonsLayout">
-      <item>
-       <widget class="QPushButton" name="moduleSettingsButton">
-        <property name="text">
-         <string>Module settings</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="moduleFilesetButton">
-        <property name="text">
-         <string>Module fileset</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="moduleParametersButton">
-        <property name="text">
-         <string>Module parameters</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="moduleConnectionsButton">
-        <property name="text">
-         <string>Module connections</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="moduleProperties">
+     <attribute name="title">
+      <string>Module Settings</string>
+     </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1281</width>
+        <height>611</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="moduleVerticalLayout">
+       <item>
+        <layout class="QVBoxLayout" name="ModuleInfoSettingLayout"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="ButtonLayout">
+         <item>
+          <widget class="QPushButton" name="saveModuleSettingsButton">
+           <property name="text">
+            <string>Сохранить</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
     </widget>
-    <widget class="QWidget" name="windowForWidgets" native="true">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>50</y>
-       <width>1281</width>
-       <height>591</height>
-      </rect>
-     </property>
+    <widget class="QWidget" name="FilesetSettings">
+     <attribute name="title">
+      <string>Fileset</string>
+     </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-1</y>
+        <width>1281</width>
+        <height>611</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="FileSetVLayout">
+       <item>
+        <layout class="QVBoxLayout" name="FileSettingQSYNTH"/>
+       </item>
+       <item>
+        <widget class="QListView" name="FilesList"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="ButtonsFileset">
+         <item>
+          <widget class="QPushButton" name="AddFileToFilesetButton">
+           <property name="text">
+            <string>Добавить файл</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="SaveFilesetButton">
+           <property name="text">
+            <string>Сохранить</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ParametersSettings">
+     <attribute name="title">
+      <string>Parameters</string>
+     </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-1</y>
+        <width>1281</width>
+        <height>621</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="ParametersSettingVLayout">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QGridLayout" name="gridLayout"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QPushButton" name="ParametersSettingsSaveButton">
+           <property name="text">
+            <string>Сохранить</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </widget>
   </widget>
