@@ -34,6 +34,10 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
         self.QSLineEdits = []
         self.__show_fileset()
 
+        # -- Parameters settings
+        self.parameters = {}
+        self.__show_parameters()
+
         # buttons connection
         self.newProjectButton.clicked.connect(self.__newProject)
         self.loadProjectButton.clicked.connect(self.__loadProject)
@@ -41,6 +45,7 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
         self.saveModuleSettingsButton.clicked.connect(self.__save_module_settings)
         self.SaveFilesetButton.clicked.connect(self.__save_fileset)
         self.AddFileToFilesetButton.clicked.connect(self.__add_file_to_fileset)
+        self.addParameterButton.clicked.connect(self.__add_parameter)
 
         self.show()
 
@@ -76,7 +81,13 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
     # -- fileset settings --
     def __save_fileset(self):
         for prop, newProp in zip(self.module.settings['fileset']['QUARTUS_SYNTH']['property'], self.QSLineEdits):
-            self.module.settings['fileset']['QUARTUS_SYNTH']['property'] = newProp
+            self.module.settings['fileset']['QUARTUS_SYNTH']['property'][prop] = newProp.text
+
+        for file in self.module.settings['fileset']["files"]:
+            if file != self.module.settings['fileset']['QUARTUS_SYNTH']['property']["TOP_LEVEL"]:
+                self.module.settings['fileset']["files"][file]["status"] = None
+            else:
+                self.module.settings['fileset']["files"][file]["status"] = "TOP_LEVEL"
 
     def __add_file_to_fileset(self):
         filename, ok = QFileDialog.getOpenFileName(self,
@@ -85,9 +96,7 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
                                                    "sv(*.sv);;All Files(*.*)")
         try:
             a = self.module.settings['fileset']['files'][filename]
-            print("already here")
         except KeyError:
-            print(filename)
             newDict = self.module.settings['fileset']['files'][filename.split("/")[-1]] = {}
             newDict.update(
                 {
@@ -96,8 +105,20 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
                     "status": None
                 }
             )
-            print(self.module.settings['fileset']['files'])
             self.__show_fileset()
+
+    def __add_file_headlines(self):
+        HLayout = QHBoxLayout()
+        label1 = QLabel()
+        label1.setText("type")
+        label2 = QLabel()
+        label2.setText("path")
+        label3 = QLabel()
+        label3.setText("name")
+        HLayout.addWidget(label1, alignment=Qt.AlignCenter)
+        HLayout.addWidget(label2, alignment=Qt.AlignCenter)
+        HLayout.addWidget(label3, alignment=Qt.AlignCenter)
+        self.FilesVLayout.addLayout(HLayout)
 
     def __show_fileset(self):
         # file list
@@ -121,7 +142,6 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
             label = QLabel()
             label.setText(QSYNTHProp)
             HLayout.addWidget(label, alignment=Qt.AlignCenter)
-
             lineEdit = QLineEdit()
             lineEdit.setText(self.module.settings['fileset']['QUARTUS_SYNTH']['property'][QSYNTHProp])
             self.QSLineEdits.append(lineEdit)
@@ -129,19 +149,75 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
 
             self.FileSettingQSYNTH.addLayout(HLayout)
 
+        self.__add_file_headlines()
         for file in self.module.settings['fileset']['files']:
             HLayout = QHBoxLayout()
 
             typeLabel = QLabel()
             typeLabel.setText(self.module.settings['fileset']['files'][file]['type'])
-            HLayout.addWidget(typeLabel)
+            HLayout.addWidget(typeLabel, alignment=Qt.AlignCenter)
 
             pathLabel = QLabel()
             pathLabel.setText(self.module.settings['fileset']['files'][file]['PATH'])
-            HLayout.addWidget(pathLabel)
+            HLayout.addWidget(pathLabel, alignment=Qt.AlignCenter)
+
+            nameLabel = QLabel()
+            nameLabel.setText(file)
+            HLayout.addWidget(nameLabel, alignment=Qt.AlignCenter)
 
             self.FilesVLayout.addLayout(HLayout)
 
+    # -- parameters settings --
+    def __add_parameter(self):
+        name, ok = QInputDialog.getText(self, "Input dialog", "Input parameter name")
+        newDict = {
+            name: {
+                "property": {
+                    "DEFAULT_VALUE": None,
+                    "DISPLAY_NAME": None,
+                    "TYPE": None,
+                    "UNITS": None,
+                    "HDL_PARAMETER": None
+                }
+            }
+        }
+        self.module.settings["parameter"].update(newDict)
+        self.__show_parameters()
+
+    def __show_parameters(self):
+
+        while self.ParametersLayout.count():
+            sublayout = self.ParametersLayout.takeAt(0).layout()
+
+            while sublayout.count():
+                subsub = sublayout.takeAt(0)
+                if type(subsub) == QWidgetItem:
+                    subsub: QWidgetItem
+                    subsub.widget().setParent(None)
+                elif type(subsub) == QHBoxLayout:
+                    subsub: QHBoxLayout
+                    subsub.setParent(None)
+            sublayout.setParent(None)
+
+        for parameter in self.module.settings['parameter']:
+            self.parameters[parameter] = []
+            HParamLayout = QVBoxLayout()
+            name = QLabel()
+            name.setText(parameter)
+            HParamLayout.addWidget(name)
+            for info in self.module.settings['parameter'][parameter]['property']:
+                HLayout = QHBoxLayout()
+                label = QLabel()
+                label.setText(info)
+                HLayout.addWidget(label)
+                lineEdit = QLineEdit()
+                lineEdit.setText(self.module.settings['parameter'][parameter]['property'][info])
+                HLayout.addWidget(lineEdit)
+                self.parameters[parameter].append(lineEdit)
+                HParamLayout.addLayout(HLayout)
+            self.ParametersLayout.addLayout(HParamLayout)
+
+    # -- project settings --
     def __newProject(self):
         self.module = module.Module()
         self.__show_module_settings()
@@ -154,6 +230,7 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
                                                    "tcl(*.tcl);;json(*.json);;All Files(*.*)")
         self.module.read_file(filename)
 
+        self.__show_parameters()
         self.__show_module_settings()
         self.__show_fileset()
 

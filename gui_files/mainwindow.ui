@@ -74,14 +74,14 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>-4</x>
-      <y>29</y>
-      <width>1281</width>
-      <height>641</height>
+      <x>0</x>
+      <y>30</y>
+      <width>1271</width>
+      <height>651</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="moduleProperties">
      <attribute name="title">
@@ -124,7 +124,7 @@
         <x>0</x>
         <y>-1</y>
         <width>1281</width>
-        <height>611</height>
+        <height>591</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="FileSetVLayout">
@@ -165,19 +165,22 @@
         <x>0</x>
         <y>-1</y>
         <width>1281</width>
-        <height>621</height>
+        <height>601</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="ParametersSettingVLayout">
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_3">
-         <item>
-          <layout class="QGridLayout" name="gridLayout"/>
-         </item>
-        </layout>
+        <layout class="QVBoxLayout" name="ParametersLayout"/>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QPushButton" name="addParameterButton">
+           <property name="text">
+            <string>Добавить параметр</string>
+           </property>
+          </widget>
+         </item>
          <item>
           <widget class="QPushButton" name="ParametersSettingsSaveButton">
            <property name="text">

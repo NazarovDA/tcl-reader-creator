@@ -177,7 +177,6 @@ class Module:
                 self.__log_key_error(KeyError)
 
     def read_file(self, filename: str):
-        print("read_file")
         if filename[-4:] == ".tcl":
             return self.__read_tcl(filename=filename)
 
