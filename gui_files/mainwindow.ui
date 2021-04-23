@@ -75,9 +75,9 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>30</y>
+      <y>40</y>
       <width>1271</width>
-      <height>651</height>
+      <height>641</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -92,7 +92,7 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1281</width>
+        <width>1261</width>
         <height>611</height>
        </rect>
       </property>
@@ -121,9 +121,9 @@
      <widget class="QWidget" name="verticalLayoutWidget_4">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>-1</y>
-        <width>1281</width>
+        <x>10</x>
+        <y>10</y>
+        <width>1241</width>
         <height>591</height>
        </rect>
       </property>
@@ -162,15 +162,23 @@
      <widget class="QWidget" name="verticalLayoutWidget_6">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>-1</y>
-        <width>1281</width>
-        <height>601</height>
+        <x>10</x>
+        <y>10</y>
+        <width>1241</width>
+        <height>591</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="ParametersSettingVLayout">
        <item>
-        <layout class="QVBoxLayout" name="ParametersLayout"/>
+        <layout class="QVBoxLayout" name="ParametersLayout">
+         <item alignment="Qt::AlignRight">
+          <widget class="QScrollBar" name="verticalScrollBar">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
