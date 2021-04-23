@@ -69,9 +69,9 @@ class Ui_MainWindow(object):
         self.FileSettingQSYNTH = QtWidgets.QVBoxLayout()
         self.FileSettingQSYNTH.setObjectName("FileSettingQSYNTH")
         self.FileSetVLayout.addLayout(self.FileSettingQSYNTH)
-        self.FilesList = QtWidgets.QListView(self.verticalLayoutWidget_4)
-        self.FilesList.setObjectName("FilesList")
-        self.FileSetVLayout.addWidget(self.FilesList)
+        self.FilesVLayout = QtWidgets.QVBoxLayout()
+        self.FilesVLayout.setObjectName("FilesVLayout")
+        self.FileSetVLayout.addLayout(self.FilesVLayout)
         self.ButtonsFileset = QtWidgets.QHBoxLayout()
         self.ButtonsFileset.setObjectName("ButtonsFileset")
         self.AddFileToFilesetButton = QtWidgets.QPushButton(self.verticalLayoutWidget_4)
@@ -113,7 +113,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

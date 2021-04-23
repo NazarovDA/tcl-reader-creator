@@ -81,7 +81,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="moduleProperties">
      <attribute name="title">
@@ -132,7 +132,7 @@
         <layout class="QVBoxLayout" name="FileSettingQSYNTH"/>
        </item>
        <item>
-        <widget class="QListView" name="FilesList"/>
+        <layout class="QVBoxLayout" name="FilesVLayout"/>
        </item>
        <item>
         <layout class="QHBoxLayout" name="ButtonsFileset">

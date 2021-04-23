@@ -39,12 +39,7 @@ add_fileset QUARTUS_SYNTH QUARTUS_SYNTH "" ""
 set_fileset_property QUARTUS_SYNTH TOP_LEVEL test
 set_fileset_property QUARTUS_SYNTH ENABLE_RELATIVE_INCLUDE_PATHS false
 set_fileset_property QUARTUS_SYNTH ENABLE_FILE_OVERWRITE_MODE false
-ad_fileset_file test.sv SYSTEM_VERILOG PATH test.sv TOP_LEVEL_FILE
-add_fileset_file test2.sv SYSTEM_VERILOG PATH test.sv
-add_fileset_file test3.sv SYSTEM_VERILOG PATH test.sv
-add_fileset_file test4.sv SYSTEM_VERILOG PATH test.sv
-add_fileset_file test5.sv SYSTEM_VERILOG PATH test.sv
-add_fileset_file test6.sv SYSTEM_VERILOG PATH test.sv
+add_fileset_file test.sv SYSTEM_VERILOG PATH test.sv TOP_LEVEL_FILE
 
 
 
