@@ -1,1 +1,559 @@
 
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:2021-04-23 19:23:02.681899
+'excepted no assigment in clock'
+Traceback (most recent call last):
+  File "E:\Utilities\pythonProjects\tcl\module.py", line 169, in write_to_tcl
+    for assignment in d[param]['assignment']:
+KeyError: 'assignment'
+ERROR:KeyError:2021-04-23 19:23:02.694902
+'excepted no assigment in reset_sink'
+Traceback (most recent call last):
+  File "E:\Utilities\pythonProjects\tcl\module.py", line 169, in write_to_tcl
+    for assignment in d[param]['assignment']:
+KeyError: 'assignment'
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:2021-04-23 19:24:51.051906
+'excepted no assigment in clock'
+Traceback (most recent call last):
+  File "E:\Utilities\pythonProjects\tcl\module.py", line 169, in write_to_tcl
+    for assignment in d[param]['assignment']:
+KeyError: 'assignment'
+ERROR:KeyError:2021-04-23 19:24:51.051906
+'excepted no assigment in reset_sink'
+Traceback (most recent call last):
+  File "E:\Utilities\pythonProjects\tcl\module.py", line 169, in write_to_tcl
+    for assignment in d[param]['assignment']:
+KeyError: 'assignment'
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:2021-04-23 19:42:56.031691
+Unexpected format to open.
+Expected: .tcl
+Received: 
+Filename: 
+NoneType: None
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:2021-04-23 22:07:19.266384
+Unexpected format to open.
+Expected: .tcl
+Received: 
+Filename: 
+NoneType: None
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:2021-04-24 02:39:40.289477
+Unexpected format to open.
+Expected: .tcl
+Received: 
+Filename: 
+NoneType: None
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:2021-04-24 03:11:47.807930
+Unexpected format to open.
+Expected: .tcl
+Received: 
+Filename: 
+NoneType: None
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 19:24:51 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
+ERROR:KeyError:2021-04-24 03:38:48.059879
+Unexpected format to open.
+Expected: .tcl
+Received: 
+Filename: 
+NoneType: None
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+

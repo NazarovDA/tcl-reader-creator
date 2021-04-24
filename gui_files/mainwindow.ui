@@ -48,7 +48,7 @@
      <item>
       <widget class="QPushButton" name="newProjectButton">
        <property name="text">
-        <string>New Project</string>
+        <string>New Project!</string>
        </property>
       </widget>
      </item>
@@ -170,17 +170,6 @@
       </property>
       <layout class="QVBoxLayout" name="ParametersSettingVLayout">
        <item>
-        <layout class="QVBoxLayout" name="ParametersLayout">
-         <item alignment="Qt::AlignRight">
-          <widget class="QScrollBar" name="verticalScrollBar">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
           <widget class="QPushButton" name="addParameterButton">
@@ -197,6 +186,26 @@
           </widget>
          </item>
         </layout>
+       </item>
+       <item>
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidget">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1237</width>
+            <height>556</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
        </item>
       </layout>
      </widget>
