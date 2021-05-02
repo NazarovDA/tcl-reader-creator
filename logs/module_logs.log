@@ -3,6 +3,10 @@ ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
 
 ERROR:KeyError:wrong command 'DO NOT MODIFY'
 
+ERROR:KeyError:wrong command 'Fri Apr 23 02:45:31 2021'
+
+ERROR:KeyError:wrong command 'DO NOT MODIFY'
+
 ERROR:KeyError:2021-04-23 19:23:02.681899
 'excepted no assigment in clock'
 Traceback (most recent call last):

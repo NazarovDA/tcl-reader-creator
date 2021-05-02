@@ -27,8 +27,7 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
 
         self.PARAMSLABEL = []
         self.LINEEDIT = []
-
-
+        self.ParametersLayout.addWidget(self.verticalScrollBar)
         # -- Module settings --
         self.moduleSettingsLineEdits = []
         self.done_module_settings = False
@@ -193,18 +192,41 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
         pass
 
     def __show_parameters(self):
-        # self.scrollAreaWidget
-        for children in self.scrollArea.children():
-            children.setParent(None)
-        widget = QWidget()
+        """
+        while self.ParametersLayout.count():
+            sublayout = self.ParametersLayout.takeAt(0).layout()
+            while sublayout.count():
+                subsub = sublayout.takeAt(0)
+                if type(subsub) == QWidgetItem:
+                    subsub: QWidgetItem
+
+                    subsub.widget().setParent(None)
+                elif type(subsub) == QHBoxLayout:
+                    subsub: QHBoxLayout
+
+                    subsub.setParent(None)
+                elif type(subsub) == QVBoxLayout:
+                    subsub: QVBoxLayout
+                    subsub.setParent(None)
+
+            sublayout.setParent(None)"""
+
+        while len(self.PARAMSLABEL) > 0:
+            label: QLabel = self.PARAMSLABEL.pop(0)
+            label.setVisible(False)
+        while len(self.LINEEDIT) > 0:
+            lineEdit: QLineEdit = self.LINEEDIT.pop(0)
+            lineEdit.setVisible(False)
+
+        print(self.ParametersLayout.children())
+
         for parameter in self.module.settings['parameter']:
             self.parameters[parameter] = []
             HParamLayout = QVBoxLayout()
-            name = QLineEdit()
+            name = QLabel()
             name.setText(parameter)
-            self.LINEEDIT.append(name)
+            self.PARAMSLABEL.append(name)
             HParamLayout.addWidget(name)
-
             for info in self.module.settings['parameter'][parameter]['property']:
                 HLayout = QHBoxLayout()
                 label = QLabel()
@@ -217,12 +239,7 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
                 HLayout.addWidget(lineEdit)
                 self.parameters[parameter].append(lineEdit)
                 HParamLayout.addLayout(HLayout)
-                widget.setLayout(HParamLayout)
-
-        print("ahahah")
-        self.scrollArea.setWidget(widget)
-        print(self.scrollArea.children())
-        print(self.module.settings['parameter'])
+            self.ParametersLayout.addLayout(HParamLayout)
 
     # -- project settings --
     def __newProject(self):

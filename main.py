@@ -16,6 +16,5 @@ def do_smth():
     ex = GUI.WINDOW()
     sys.exit(app.exec_())
 
-
 if __name__ == "__main__":
     do_smth()
