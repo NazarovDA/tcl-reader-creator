@@ -48,7 +48,7 @@
      <item>
       <widget class="QPushButton" name="newProjectButton">
        <property name="text">
-        <string>New Project!</string>
+        <string>New Project</string>
        </property>
       </widget>
      </item>
@@ -75,9 +75,9 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>40</y>
+      <y>30</y>
       <width>1271</width>
-      <height>641</height>
+      <height>651</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -92,7 +92,7 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1261</width>
+        <width>1281</width>
         <height>611</height>
        </rect>
       </property>
@@ -121,9 +121,9 @@
      <widget class="QWidget" name="verticalLayoutWidget_4">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>1241</width>
+        <x>0</x>
+        <y>-1</y>
+        <width>1281</width>
         <height>591</height>
        </rect>
       </property>
@@ -162,13 +162,16 @@
      <widget class="QWidget" name="verticalLayoutWidget_6">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>1241</width>
-        <height>591</height>
+        <x>0</x>
+        <y>-1</y>
+        <width>1281</width>
+        <height>601</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="ParametersSettingVLayout">
+       <item>
+        <layout class="QVBoxLayout" name="ParametersLayout"/>
+       </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
@@ -186,26 +189,6 @@
           </widget>
          </item>
         </layout>
-       </item>
-       <item>
-        <widget class="QScrollArea" name="scrollArea">
-         <property name="widgetResizable">
-          <bool>true</bool>
-         </property>
-         <widget class="QWidget" name="scrollAreaWidget">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>1237</width>
-            <height>556</height>
-           </rect>
-          </property>
-         </widget>
-        </widget>
        </item>
       </layout>
      </widget>

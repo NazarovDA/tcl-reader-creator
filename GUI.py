@@ -18,6 +18,7 @@ log = logging.getLogger("KeyError")
 class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
     def __init__(self):
         """
+        terminal command that using for convert .ui -> .py
         pyuic5 gui_files/mainwindow.ui -o python_gui_files/mainwindow.py
         """
         super().__init__()
@@ -27,7 +28,6 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
 
         self.PARAMSLABEL = []
         self.LINEEDIT = []
-        self.ParametersLayout.addWidget(self.verticalScrollBar)
         # -- Module settings --
         self.moduleSettingsLineEdits = []
         self.done_module_settings = False
@@ -127,18 +127,17 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
     def __show_fileset(self):
         # file list
 
-        """# clearing previous widgets
-        while self.FileSettingQSYNTH.count():
-            sublayout = self.FileSettingQSYNTH.takeAt(0).layout()
-            while sublayout.count():
-                widget: QtWidgets = sublayout.takeAt(0).widget()
-                widget.setParent(None)"""
-
         while self.FilesVLayout.count():
             sublayout = self.FilesVLayout.takeAt(0).layout()
             while sublayout.count():
                 widget: QtWidgets = sublayout.takeAt(0).widget()
-                widget.setParent(None)
+                widget.setVisible(False)
+
+        while self.FileSettingQSYNTH.children():
+            sublayout = self.FileSettingQSYNTH.takeAt(0).layout()
+            while sublayout.count():
+                widget: QtWidgets = sublayout.takeAt(0).widget()
+                widget.setVisible(False)
 
         for QSYNTHProp in self.module.settings['fileset']['QUARTUS_SYNTH']['property']:
             HLayout = QHBoxLayout()
@@ -189,27 +188,9 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
         self.__show_parameters()
 
     def __save_parameters(self):
-        pass
+        print(self.parameters)
 
     def __show_parameters(self):
-        """
-        while self.ParametersLayout.count():
-            sublayout = self.ParametersLayout.takeAt(0).layout()
-            while sublayout.count():
-                subsub = sublayout.takeAt(0)
-                if type(subsub) == QWidgetItem:
-                    subsub: QWidgetItem
-
-                    subsub.widget().setParent(None)
-                elif type(subsub) == QHBoxLayout:
-                    subsub: QHBoxLayout
-
-                    subsub.setParent(None)
-                elif type(subsub) == QVBoxLayout:
-                    subsub: QVBoxLayout
-                    subsub.setParent(None)
-
-            sublayout.setParent(None)"""
 
         while len(self.PARAMSLABEL) > 0:
             label: QLabel = self.PARAMSLABEL.pop(0)
@@ -217,8 +198,6 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
         while len(self.LINEEDIT) > 0:
             lineEdit: QLineEdit = self.LINEEDIT.pop(0)
             lineEdit.setVisible(False)
-
-        print(self.ParametersLayout.children())
 
         for parameter in self.module.settings['parameter']:
             self.parameters[parameter] = []
@@ -246,6 +225,7 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
         self.module = module.Module()
         self.__show_module_settings()
         self.__show_fileset()
+        self.__show_parameters()
 
     def __loadProject(self):
         filename, ok = QFileDialog.getOpenFileName(self,
