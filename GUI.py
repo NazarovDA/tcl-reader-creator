@@ -131,13 +131,13 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
             sublayout = self.FilesVLayout.takeAt(0).layout()
             while sublayout.count():
                 widget: QtWidgets = sublayout.takeAt(0).widget()
-                widget.setVisible(False)
+                widget.setParent(None)
 
         while self.FileSettingQSYNTH.children():
             sublayout = self.FileSettingQSYNTH.takeAt(0).layout()
             while sublayout.count():
                 widget: QtWidgets = sublayout.takeAt(0).widget()
-                widget.setVisible(False)
+                widget.setParent(None)
 
         for QSYNTHProp in self.module.settings['fileset']['QUARTUS_SYNTH']['property']:
             HLayout = QHBoxLayout()
@@ -188,16 +188,16 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
         self.__show_parameters()
 
     def __save_parameters(self):
-        print(self.parameters)
+        pass
 
     def __show_parameters(self):
 
         while len(self.PARAMSLABEL) > 0:
             label: QLabel = self.PARAMSLABEL.pop(0)
-            label.setVisible(False)
+            label.setParent(None)
         while len(self.LINEEDIT) > 0:
             lineEdit: QLineEdit = self.LINEEDIT.pop(0)
-            lineEdit.setVisible(False)
+            lineEdit.setParent(None)
 
         for parameter in self.module.settings['parameter']:
             self.parameters[parameter] = []
@@ -219,6 +219,14 @@ class WINDOW(QMainWindow, mainwindow.Ui_MainWindow):
                 self.parameters[parameter].append(lineEdit)
                 HParamLayout.addLayout(HLayout)
             self.ParametersLayout.addLayout(HParamLayout)
+
+    # -- сonnection point settings --
+    def __show_connection_points(self):
+        # TODO: Figure out how to add connection points properly
+        scrollaAreaWidget = QWidget()
+        for interface in self.module.settings["interface"]:
+            pass
+
 
     # -- project settings --
     def __newProject(self):
